@@ -217,32 +217,26 @@ nav.compact { padding: 1rem 4rem; }
   position: relative;
   display: flex;
   align-items: flex-end;
-  padding: 0 4rem 5rem;
-}
-
-.hero-bg-clip {
-  position: absolute;
-  inset: 0;
+  padding: 10rem 4rem 6rem;
   overflow: hidden;
-  pointer-events: none;
 }
 
 .hero-bg {
   position: absolute;
-  inset: -10%;
+  inset: -30%;
   background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=85&fit=crop');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 40%;
   will-change: transform;
-  filter: brightness(.75) saturate(.9);
+  filter: brightness(.7) saturate(.88);
 }
 
 .hero-vignette {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to top,  #080808 0%, rgba(8,8,8,.65) 35%, rgba(8,8,8,.15) 70%, rgba(8,8,8,.4) 100%),
-    linear-gradient(to right, rgba(8,8,8,.5) 0%, transparent 60%);
+    linear-gradient(to top, #080808 0%, rgba(8,8,8,.8) 30%, rgba(8,8,8,.3) 65%, rgba(8,8,8,.55) 100%),
+    linear-gradient(to right, rgba(8,8,8,.6) 0%, transparent 55%);
 }
 
 .hero-content {
@@ -864,7 +858,7 @@ footer {
   nav.compact { padding: .9rem 2rem; }
   .nav-links, .nav-btn { display: none; }
   .hamburger { display: flex; }
-  #hero { padding: 0 2rem 4rem; }
+  #hero { padding: 9rem 2rem 5rem; }
   .hero-scroll-hint { display: none; }
   #about { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
   .about-year { font-size: 2.2rem; }
@@ -922,10 +916,8 @@ footer {
      HERO
 ════════════════════════════════ -->
 <section id="hero">
-  <div class="hero-bg-clip">
-    <div class="hero-bg" id="hero-bg"></div>
-    <div class="hero-vignette"></div>
-  </div>
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-vignette"></div>
   <div class="hero-content">
     <p class="hero-eyebrow">Nueva Colección 2025</p>
     <h1 class="hero-title">
@@ -1397,7 +1389,7 @@ footer {
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     if (y < hero.offsetHeight * 1.2) {
-      bg.style.transform = `translateY(${y * .38}px)`;
+      bg.style.transform = `translateY(${y * .25}px)`;
     }
   }, { passive: true });
 })();

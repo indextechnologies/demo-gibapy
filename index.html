@@ -218,12 +218,18 @@ nav.compact { padding: 1rem 4rem; }
   display: flex;
   align-items: flex-end;
   padding: 0 4rem 5rem;
+}
+
+.hero-bg-clip {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .hero-bg {
   position: absolute;
-  inset: 0;
+  inset: -10%;
   background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=85&fit=crop');
   background-size: cover;
   background-position: center 30%;
@@ -269,7 +275,7 @@ nav.compact { padding: 1rem 4rem; }
   font-family: var(--f-display);
   font-size: clamp(3.5rem, 9vw, 8.5rem);
   font-weight: 900;
-  line-height: .92;
+  line-height: 1.05;
   letter-spacing: -.01em;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -916,8 +922,10 @@ footer {
      HERO
 ════════════════════════════════ -->
 <section id="hero">
-  <div class="hero-bg" id="hero-bg"></div>
-  <div class="hero-vignette"></div>
+  <div class="hero-bg-clip">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-vignette"></div>
+  </div>
   <div class="hero-content">
     <p class="hero-eyebrow">Nueva Colección 2025</p>
     <h1 class="hero-title">
